@@ -1,35 +1,32 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Gallery Page</title>
-        <link href="imageStyles.css" rel="stylesheet" type="text/css"/>
-    </head>
-    <body>
-        <nav style="background-color:#1C1E20; width: auto; min-width: 860px;">
-            <div class="bar">  
-                <div style="display: flex; flex-grow: 1; margin-left: 25px;">
-                    <a href="index.html">
-                    <img src="Icons/Logo.png" style="height: 50px;">
-                    </a>
-                </div>                                  
-                <div>
-                    <ul>
-                        <li>FEED</li>
-                        <li>AUTHORS</li>
-                        <li>EXPLORE</li>
-                        <li>BLOG</li>
-                        <li>CONTACT</li>
-                    </ul>
-                </div>
-                <ul>
-                    <li><img src="Icons/Search.svg"></li>
-                    <li><img src="Icons/Notifications.svg"></li>
-                    <li><img src="Icons/Component.svg"></li>
-                </ul>             
-            </div>
-        </nav> 
-        <div class="container">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Page</title>
+    <link href="imageStyles.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <a href="index.html" class="nvpart1">
+                <img src="Icons/Logo.png" style="height: 50px;">
+            </a>
+            <ul class="nvpart2">
+                <li>FEED</li>
+                <li>AUTHORS</li>
+                <li>EXPLORE</li>
+                <li>BLOG</li>
+                <li>CONTACT</li>
+            </ul>
+            <ul class="nvpart3">
+                <li><img src="Icons/Search.svg"></li>
+                <li><img src="Icons/Notifications.svg"></li>
+                <li><img src="Icons/Component.svg"></li>
+            </ul>
+        </nav>
+        <div class="cont">
             <div class="bitmap">
                 <div class="content">
                     <div>
@@ -37,12 +34,14 @@
                         <p>Enter your image description here.</p>
                     </div>
                 </div>
-                <div class="Back">
+                <div class="back">
                     <a href="index.html">
-                    <img src="Icons/Back.svg">
+                        <img src="Icons/Back.svg">
                     </a>
                 </div>
             </div>
         </div>
-    </body>
+    </div>
+</body>
+
 </html>

@@ -3,50 +3,76 @@
     margin: 0;
     font-family: Arial, sans-serif;
 }
-  
+
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 li {
-  display:inline;
-  margin-right: 40px;
+    display: inline;
+    color: #ffffff;
 }
 
-ul {
-  list-style: none;
-  color: inherit;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-grow: 3;
-}
-
-.bar{
-    width: inherit;
-    margin: auto;
-    height: 100px;
-    color: white;
+nav {
     display: flex;
+    background-color: #1C1E20;
     align-items: center;
-    justify-content: flex-end;
 }
 
-.container{
+.nvpart1 {
+    margin: 25px;
+}
+
+.nvpart2 {
+    justify-content: center;
+    display: flex;
+    gap: 40px;
+    flex-grow: 3;
+    padding: 0;
+}
+
+.nvpart3 {
+    display: flex;
+    justify-content: flex-end;
+    gap: 40px;
+    margin-right: 40px;
+}
+
+@media screen and (max-width: 900px) {
+    .nvpart2 {
+        display: none;
+    }
+    .nvpart3 {
+        flex-grow: 1;
+    }
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 100px auto;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.cont {
     display: flex;
     position: relative;
-    height: 798px;
     background-image: url(Img/Background.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-  }
-  .container .bitmap{
+}
+
+.cont .bitmap {
     height: 100%;
     width: 100%;
-  }
+}
 
-  .container .bitmap::before{
+.cont .bitmap::before {
     content: '';
     position: absolute;
     top: 0;
@@ -58,11 +84,12 @@ ul {
     opacity: 0;
     transition: all 0.5s ease-in-out 0.05s;
 }
-  .container:hover .bitmap::before{
-    opacity: 1;
-  }
 
-  .container .bitmap .content{
+.cont:hover .bitmap::before {
+    opacity: 1;
+}
+
+.cont .bitmap .content {
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
@@ -72,36 +99,35 @@ ul {
     height: 50%;
     padding: 80px;
     z-index: 1;
-  }
+}
 
-
-  .container .bitmap .content h2{
+.cont .bitmap .content h2 {
     color: #fff;
     transition: all 0.5s ease-in-out 0.05s;
     text-transform: uppercase;
     margin-bottom: 5px;
-    font-size: 70px;
+    font-size: 5vw;
     transform: translateY(200px);
-  }
+}
 
-  .container .bitmap .content:hover h2{
-      transform: translateY(0);
-      transition-delay: 0.1s;
-  }
+.cont .bitmap .content:hover h2 {
+    transform: translateY(0);
+    transition-delay: 0.1s;
+}
 
-    .container .bitmap .content p{
+.cont .bitmap .content p {
     color: #fff;
     transform: translateY(200px);
     transition: all 0.5s ease-in-out 0.05s;
-    font-size: 40px;
-  }
+    font-size: 2.5vw;
+}
 
-  .container .bitmap .content:hover p{
+.cont .bitmap .content:hover p {
     transform: translateY(0);
-    transition-delay: 0.1s;     
-  }
+    transition-delay: 0.1s;
+}
 
-  .container .bitmap .Back{
+.cont .bitmap .back {
     display: flex;
     justify-content: flex-end;
     position: absolute;
@@ -111,21 +137,17 @@ ul {
     right: 50px;
     z-index: 1;
     transition: all 0.5s ease-in-out 0.05s;
-  } 
-  .container .bitmap .Back img{      
+}
+
+.cont .bitmap .back img {
     transition: all 0.5s ease-in-out 0.05s;
-    width: 50px;
-  }
+    width: 5vw;
+}
 
+.cont .bitmap .content:hover~.back img {
+    width: 10vw;
+}
 
-  .container .bitmap .content:hover ~ .Back img{
-    width: 100px;
-  }
-  .container .bitmap .content:not(:hover) ~ .Back:hover img{
-    width: 100px;
-  }
-  
-  a:link {
-    text-decoration: none;
-  }
-
+.cont .bitmap .content:not(:hover)~.back:hover img {
+    width: 10vw;
+}
